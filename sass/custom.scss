@@ -1,3 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --color-pale-blue: hsl(225, 100%, 94%);
+  --color-bright-blue: hsl(245, 75%, 52%);
+  --color-neutral-blue: hsl(225, 100%, 98%);
+  --color-desaturated-blue: hsl(224, 23%, 55%);
+  --color-dark-blue: hsl(223, 47%, 23%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 100%;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-pale-blue);
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vh;
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10;
+  }
+}
+
+.summary {
+  z-index: 20;
+  width: 86%;
+  background-color: var(--color-white);
+  border-radius: 1.5rem;
+  overflow: hidden;
+
+  &__banner {
+    img {
+      width: 100%;
+    }
+  }
+
+  &__body {
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  &__heading {
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+  }
+
+  &__paragraph {
+    margin: 0 auto 1.52rem auto;
+    width: 92%;
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--color-desaturated-blue);
+  }
+
+  &__plan {
+    display: flex;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-neutral-blue);
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+
+    & div {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    & p {
+      font-weight: 700;
+      color: var(--color-dark-blue);
+    }
+
+    & span {
+      display: block;
+      font-weight: 500;
+      color: var(--color-desaturated-blue);
+    }
+
+    & a:link, & a:visited {
+      color: var(--color-bright-blue);
+    }
+  }
+
+  &__cta-proceed {
+    display: block;
+    margin-bottom: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-bright-blue);
+    border-radius: 1rem;
+    box-shadow: 0 0.7rem 3rem hsla(245, 75%, 52%, 0.35);
+  }
+
+  &__cta-cancel:link, &__cta-cancel:visited {
+    display: block;
+    font-weight: 700;
+    color: var(--color-desaturated-blue);
+    text-decoration: none;
+  }
+}
+
 .attribution {
   display: none;
 }
