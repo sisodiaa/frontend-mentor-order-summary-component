@@ -78,6 +78,7 @@ body {
 .summary__heading {
   margin-bottom: 1.2rem;
   font-weight: 700;
+  color: var(--color-dark-blue);
 }
 .summary__paragraph {
   margin: 0 auto 1.52rem auto;
@@ -111,6 +112,11 @@ body {
 }
 .summary__plan a:link, .summary__plan a:visited {
   color: var(--color-bright-blue);
+  transition: opacity 0.3s;
+}
+.summary__plan a:link:hover, .summary__plan a:visited:hover {
+  opacity: 0.7;
+  text-decoration: none;
 }
 .summary__cta-proceed {
   display: block;
@@ -123,12 +129,20 @@ body {
   background-color: var(--color-bright-blue);
   border-radius: 1rem;
   box-shadow: 0 0.7rem 3rem rgba(56, 41, 224, 0.35);
+  transition: opacity 0.3s;
+}
+.summary__cta-proceed:hover {
+  opacity: 0.7;
 }
 .summary__cta-cancel:link, .summary__cta-cancel:visited {
   display: block;
   font-weight: 700;
   color: var(--color-desaturated-blue);
   text-decoration: none;
+  transition: color 0.3s;
+}
+.summary__cta-cancel:link:hover, .summary__cta-cancel:visited:hover {
+  color: var(--color-dark-blue);
 }
 
 .attribution {
