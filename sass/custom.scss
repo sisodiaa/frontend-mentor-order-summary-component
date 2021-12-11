@@ -64,6 +64,7 @@ body {
   background-color: var(--color-white);
   border-radius: 1.5rem;
   overflow: hidden;
+  box-shadow: 0 2rem 3rem hsla(224, 23%, 55%, 0.35);
 
   &__banner {
     img {
